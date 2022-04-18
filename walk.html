@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<title>Human detection - CodeSpeedy</title>
+<meta name="theme-color" content="#308455" />
+<meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style type="text/css">
+
+    @-webkit-keyframes spinner { /* For Safari */
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spinner {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .spin-it {
+       -webkit-animation: spinner 1s linear infinite; /* Safari */
+       animation: spinner 1s linear infinite;
+    }
+
+
+	header {
+		padding: 10px;
+		background: #8f50ac;
+		color: #fff;
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	
+	
+	#main {
+		margin-top: 10px;
+	}
+	/*#video-holder {
+		border: solid 2px #000;
+	}*/
+
+	.src {
+		text-align: center;
+		color: lightgray;
+	}
+</style>
+
+</head>
+<body>
+
+	<header>
+		<h1> 횡단보도 무단횡단 방지 </h1>
+		<p> 캠을 이용해 무당횡단시 알림 </p>
+	</header>
+
+<section id="main">
+  <div class="container">
+     <div class="col-sm-6" id="cnv-width">
+	   <div id="video-holder"></div>
+     </div>
+
+     <div class="col-sm-6" style="text-align: center;">
+  	   <div id="status">
+  	   	<h3 style="color: blue;"><i class="fa fa-spinner spin-it"></i></h3>
+  	   	  <h3 style="color: #085129;">Waiting...</h3>
+  	   </div>
+
+
+      <div class="left-content" style="text-align: left;font-size: 18px;">
+  	   
+  	   <!-- <p>What do you think about machine learning and artificial intelligence?</p> -->
+  	  </div>
+
+
+     </div>
+  </div>
+</section>
+
+<!-- Load canvas above -->
+
+
+ <audio style="display: none;" id="ridersound" controls>
+  <source src="rider.mp3" type="audio/mpeg">
+</audio>
+
+<audio style="display: none;" id="humansound" controls>
+	<source src="human.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+<!-- <div>Teachable Machine Image Model - p5.js and ml5.js</div> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+<script src="detect.js"></script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p class="src">
+	이 콘텐츠는 인공지능 가상 연기자 서비스, 타입캐스트를 활용하여 제작되었습니다.
+	<br>
+	출연진: 호빈이
+	<br>
+	https://typecast.ai
+</p>
+</body>
+</html>
